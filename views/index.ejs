@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointment Management System</title>
+  <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="/">Home</a>
+    <!-- <a href="/appointments">Appointments</a> -->
+    <a href="/login">Login</a>
+    <a href="/register">Register</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- Check if we're rendering the login page -->
+    <% if (token === null) { %>
+      <h2>Welcome to the Appointment Management System</h2>
+      <p>Please <a href="/login">Login</a> or <a href="/register">Register</a> to continue.</p>
+    <% } else { %>
+      <!-- Display JWT token if logged in -->
+      <h2>You're logged in!</h2>
+      <h3>Your JWT Token:</h3>
+      <textarea readonly><%= token %></textarea>
+      <p><a href="/appointments">Go to Appointments</a></p>
+    <% } %>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Login</title>
+</head>
+<body>
+  <div class="form-container login">
+    <h1>Login</h1>
+    <% if (message) { %>
+      <p class="error"><%= message %></p>
+    <% } %>
+    <form action="/api/users/login" method="POST">
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" placeholder="Enter your email" required>
+      
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" placeholder="Enter your password" required>
+      
+      <button type="submit">Login</button>
+    </form>
+    <% if (token) { %>
+      <div class="token">
+        <h3>Your JWT Token:</h3>
+        <textarea readonly><%= token %></textarea>
+      </div>
+    <% } %>
+    <p class="redirect">Don't have an account? <a href="/register">Register here</a></p>
+  </div>
+</body>
+</html>

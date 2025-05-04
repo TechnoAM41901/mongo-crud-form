@@ -1,0 +1,93 @@
+
+  body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .form-container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 90%;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: bold;
+  }
+  
+  input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .redirect {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .redirect a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .redirect a:hover {
+    text-decoration: underline;
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .token {
+    margin-top: 20px;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .token textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    border: none;
+    background: #f8f9fa;
+    font-family: monospace;
+  }
+  

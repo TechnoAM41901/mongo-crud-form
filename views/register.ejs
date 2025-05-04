@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Register</title>
+</head>
+<body>
+  <div class="form-container register">
+    <h1>Register</h1>
+    <% if (message) { %>
+      <p class="error"><%= message %></p>
+    <% } %>
+    <form action="/api/users/register" method="POST">
+      <label for="username">Username:</label>
+      <input type="text" name="username" id="username" placeholder="Enter your username" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" placeholder="Enter your email" required>
+      
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" placeholder="Enter your password" required>
+      
+      <button type="submit">Register</button>
+    </form>
+    <p class="redirect">Already have an account? <a href="/login">Login here</a></p>
+  </div>
+</body>
+</html>
